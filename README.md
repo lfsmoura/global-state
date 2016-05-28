@@ -1,12 +1,27 @@
 # global-state
-Synchronize redux state with socket.io
 
-## install
+Make a distributed app or a game using Redux and socket.io. All state is kept in the server and all clients are always in sync. When an action is dispatched in a client, it first goes through the server and all clients receive it in the same order.
+
+## Install
 
     npm install global-state
 
-## usage
+## Usage
+
+### Server-side
 With `hapi`:
 
-    var io = require('socket.io')(server.listener);
-    require('global-state')(io);
+```js
+var io = require('socket.io')(server.listener);
+require('global-state')(io);
+```
+
+### Client-side
+Using `webpack`:
+
+```js
+import createGlobalStore from 'global-state-client';
+import reducer from './myReducer.js'
+
+var myStore = createGlobalStore({ room: 'myRoom', reducer }, () => 'Global state loaded!');
+```
