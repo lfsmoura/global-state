@@ -1,0 +1,33 @@
+{
+  "name": "global-state",
+  "version": "0.1.0",
+  "description": "Synchronize redux state with socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lfsmoura/global-state.git"
+  },
+  "keywords": [
+    "socket.io",
+    "redux",
+    "synchronize",
+    "games"
+  ],
+  "author": "Leonardo Moura",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lfsmoura/global-state/issues"
+  },
+  "homepage": "https://github.com/lfsmoura/global-state#readme",
+  "dependencies": {
+    "redux": "^3.5.2",
+    "socket.io": "^1.4.6"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
