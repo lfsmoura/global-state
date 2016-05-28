@@ -12,7 +12,18 @@ Make a distributed app or a game using Redux and socket.io. All state is kept in
 With `hapi`:
 
 ```js
+const Hapi = require('hapi');
+const server = new Hapi.Server();
 var io = require('socket.io')(server.listener);
+require('global-state')(io);
+```
+
+With `express` 3/4:
+
+```js
+var app = require('express')();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 require('global-state')(io);
 ```
 
