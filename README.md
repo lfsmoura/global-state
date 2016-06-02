@@ -36,3 +36,7 @@ import reducer from './myReducer.js'
 
 var myStore = createGlobalStore({ room: 'myRoom', reducer }, () => 'Global state loaded!');
 ```
+
+## Example
+
+[See a working code on Heroku](http://globalstate.herokuapp.com). And [see how it's implemented](https://github.com/lfsmoura/global-state-examples).
