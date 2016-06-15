@@ -20,5 +20,5 @@ module.exports = function setGlobalStore(io = requiredParameter(), { prefix = 'g
     socket.on(`${prefix}.state`, function(newState) {
       state[room] = newState;
     });
-  })
+  });
 };
